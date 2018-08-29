@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.less">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Keyboard accessibility</h1>
+    <h4>For when your designers don't like outlines</h4>
+    <p>I've been in a number of roles where designers want to disable the focus rings around focusable elements because they
+      don't match the design team's preferred aesthetic. However, those rings are critical for keyboard navigation and accessibility,
+      since not all users can navigate the site using a mouse.</p>
+    <p>Here's my compromise: Disable outlines until the user triggers a "tab" keypress, and then enable outlines after that
+      point.
+    </p>
+    <p>You can click on the focusable elements below without showing the focus rings, but they will be available again as
+      soon as you try navigating using tabs.</p>
+
+    <button>A button</button>
+    <br/>
+    <a href="">A link</a>
+    <br/>
+    <div tabindex="0" aria-label="clickable div">TabIndexed Div</div>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <hr/>
+    <p>Note: for extra picky designers, you can still override these defaults.</p>
+    <button class="fancy">fancy button</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
